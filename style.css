@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+
+}
+
+.globalNavBar {
+    align-items: center;
+    color: hsl(0, 4%, 24%);
+    display: flex;
+    justify-content: space-between;
+    line-height: 21.6px;
+    padding: 0px 100px;
+   
+   
+}
+
+
+
+.logo {
+    display: inline;
+    line-height: 21.6px;
+    
+
+}
+
+.logoimg {
+    width: 47px;
+    height: 50px;
+    
+
+}
+
+.logo p {
+    font-family: 'Ultra', serif;
+    ;
+    display: inline;
+    color: hsl(186, 100%, 17%);
+    line-height: 21.6px;
+    font-size: 20px;
+    
+
+}
+
+.headerButton {
+    font-family: 'Gochi Hand', cursive;
+    display: inline;
+
+}
+
+.globalNavBar .a1,
+.globalNavBar .a2,
+.globalNavBar .a3,
+.globalNavBar .a4 {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 20px;
+    line-height: 20.25px;
+    text-align: left;
+    display: inline;
+    color: hsl(0, 4%, 24%);
+    text-decoration: none;
+    
+}
+
+.a5 {
+    font-family: 'Gochi Hand', cursive;
+    background-color: hsl(186, 100%, 17%);
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20.25px;
+    padding: 13px;
+    text-align: center;
+    text-decoration: none
+}
+
+/*section design-yellow*/
+section {
+    background-color: hsl(52, 100%, 55%);
+    color: hsl(0, 4%, 24%);
+    line-height: 21.6px;
+    padding: 160px 0px 100px
+}
+
+.layout {
+    color: hsl(0, 4%, 24%);
+    line-height: 21.6px;
+    padding: 0px 200px
+}
+
+.welcomeContainer {
+    color: hsl(0, 4%, 24%);
+    line-height: 21.6px;
+    display: inline
+}
+
+.WelcomeYellowH1 {
+    font-family: 'Gochi Hand', cursive;
+    color: hsl(0, 4%, 24%);
+    font-size: 81.45px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 81.45px;
+    margin: 0px 0px 20px;
+    width: 600px
+}
+
+.welcomeContainer p {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 35.2px;
+    margin: 0px 0px 30px;
+    width: 600px
+}
+
+.welcomeContainer div {
+    color: hsl(0, 4%, 24%);
+    line-height: 21.6px;
+    width: 600px
+}
+
+.welcomeContainer div a {
+    background-color: hsl(186, 100%, 17%);
+    box-shadow: hsl(186, 100%, 17%);
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 10px;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gochi Hand', cursive;
+
+
+}
+
+.welcomeContainer img {
+    height: 400px;
+    float: right;
+    display: inline;
+    -webkit-box-shadow: 18px -4px 31px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 18px -4px 31px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 18px -4px 31px 0px rgba(0, 0, 0, 0.75);
+
+}
+.whitebox{
+    background-color: white;
+    height: 200px
+}
+.yellowbox{
+    background-color: hsl(52, 100%, 55%);
+    color:hsl(0, 4%, 24%);
+    line-height: 21.6px
+}
+.tableName{
+    color: hsl(0, 4%, 24%);
+    font-family: 'Gochi Hand', cursive;
+    font-size: 81.45px;
+    font-weight: 300px;
+    letter-spacing: -0.5px;
+    line-height: 54px;
+    text-align: center;
+    padding: 50px;
+}
+.moreFilterShow{
+    color: hsl(0, 4%, 24%);
+    font-family: 'Gochi Hand', cursive;
+    font-size:30px;
+    font-weight: 300px;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    text-align: center;
+    padding: 25px;
+}
+.showAll,
+.hideAll
+{
+    background-color: hsl(186, 100%, 17%);
+    box-shadow: hsl(186, 100%, 17%);
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 10px;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gochi Hand', cursive;
+    margin: 44px 
+}
+.btn{
+    margin-left: 450px
+}
+#tblCsoport{
+    
+    font-size: 20px;
+    font-family: 'Gochi Hand', cursive;
+    border-collapse: collapse;
+    width: 80%;
+    background-color:white;
+    margin: 100px;
+    -webkit-box-shadow: 18px -4px 31px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 18px -4px 31px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 18px -4px 31px 0px rgba(0, 0, 0, 0.75);
+
+}
+#tblCsoport td, #tblCsoport th{
+    border: 1px solid #ddd;
+    padding:4px;
+    width:80%
+    
+}
+
+
+#tblCsoport tr:nth-child(even){
+    background-color: #f2f2f2;
+
+}
+#tblCsoport tr:hover{
+background-color: #ddd
+}
+#tblCsoport th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: hsl(186, 100%, 17%);
+    color: white
+}
+.radioBtn{
+    color: hsl(0, 4%, 24%);
+    font-family: 'Gochi Hand', cursive;
+    font-size:30px;
+    font-weight: 300px;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+    
+}
+.radioBtn label:nth-of-type(1){
+    background-color:#25691b;
+    border-radius: 8px
+}  
+.radioBtn label:nth-of-type(2){
+    background-color:#d66e1e;
+    border-radius: 8px
+}  
+.radioBtn label:nth-of-type(3){
+    background-color: tomato;
+    border-radius: 8px
+}  
+.inputSearch{
+    border-radius: 27px 0px   0px 27px ;
+    font-size: 30px;
+    padding: 20px 30px;
+    text-align: center
+
+}
+.startSearch{
+    background-color: hsl(186, 100%, 17%);
+     border-radius: 0px 27px 27px 0px;
+    font-size: 50px;
+    display:inline-block;
+    padding:22px 22px 0px 18px;
+    height:56px;
+    text-align: justify
+
+}
+.search{
+    margin-left: 500px;
+}
+.clear{
+    background-color: hsl(186, 100%, 17%);
+    box-shadow: hsl(186, 100%, 17%);
+    color: white;
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 10px;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gochi Hand', cursive;
+    margin: 44px 630px
+
+}
+.yellowboxQuestion{
+background-color: hsl(52, 100%, 55%);
+color:hsl(0, 4%, 24%);
+line-height: 21.6px;
+
+}

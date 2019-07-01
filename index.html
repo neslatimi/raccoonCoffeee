@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Ultra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header class="globalNavBar">
+        <div class="logo">
+            <img class="logoimg" src="/img/racoonLogo.png" alt="raccoonlogo">
+            <p>Racoon Coffee</p>
+        </div>
+        <a class="a1" href="#tableName">List of our Coffee's</a>
+        <a class="a2" href="#shopping">Make your order</a>
+        <a class="a3" href="#shopping">Check your shopping list &#128722;</a>
+        <a class="a4" href="#">Contacts</a>
+        <a class="a5" href="#">Sign Up</a>
+    </header>
+    <section class="WelcomeYellow">
+        <div class="layout">
+            <div class="welcomeContainer">
+                <img src="/img/yellowracoon.png" alt="">
+                <h1 class="WelcomeYellowH1">Find the best Coffee's ever</h1>
+                <p>Take your time and find the best coffee foryourself.Our company can provide for you over 1million of
+                    coffee:)</p>
+                <div><a class="pickOne" href="#tableName">Pick one</a></div>
+            </div>
+        </div>
+    </section>
+    <div class="whitebox"></div>
+    <div class="yellowbox">
+        <h2 class="tableName" id="tableName">Check out the Coffee's</h2>
+        <div class="search">
+            <input type="text" class="inputSearch" placeholder="Search by name....">
+            <div class="startSearch">🔎</div>
+            <div class="searchResult"></div>
+        </div>
+        <div class="btn">
+            <a class="showAll">Show all the coffee</a>
+            <a class="hideAll">Hide all the coffee</a>
+        </div>
+        <div>
+            <h3 class="moreFilterShow">Click for more filter ⯆</h3>
+            <div class="hideAndShow">
+                <div class="radioBtn">
+                    <p>Select by intensity:</p>
+                    <input id="light" type="radio" name="indensity" value="light">
+                    <label for="light">Light</label>
+                    <input id="medium" type="radio" name="indensity" value="medium">
+                    <label for="medium">Medium</label>
+                    <input id="strong" type="radio" name="indensity" value="strong">
+                    <label for="strong">Strong</label>
+                    <div class="clear">Clear your select</div>
+                    
+                </div>
+                <div class="yellowboxQuestion">
+                        <p>Select one of them:</p>
+                        <div id="cheap">Most cheapest coffee/Cup: <p  class="outputcheap"></p></div>
+                        <div id="expensive">Most Expensive coffee/Cup:  <p class="outputExpensive"></p></div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    <table id="tblCsoport">
+        <thead>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Intensity</th>
+            <th>Instock</th>
+            <th>Price/Kg</th>
+            <th>Price/cup</th>
+            <th>Buy</th>
+            <th>#Id</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <div class="whitebox"></div>
+    <div class="yellowbox"></div>
+
+    <div class="yellowbox">
+        <div id="shopping">Hello</div>
+    </div>
+
+
+    <script type="text/javascript" src="/main.js"></script>
+</body>
+
+</html>
