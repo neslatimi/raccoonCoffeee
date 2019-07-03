@@ -10,7 +10,9 @@ body {
     justify-content: space-between;
     line-height: 21.6px;
     padding: 0px 100px;
-   
+    background-color: hsl(52, 100%, 55%);
+   position:fixed;
+   width: 90%
    
 }
 
@@ -70,7 +72,8 @@ body {
     line-height: 20.25px;
     padding: 13px;
     text-align: center;
-    text-decoration: none
+    text-decoration: none;
+    border-radius: 20px
 }
 
 /*section design-yellow*/
@@ -131,6 +134,7 @@ section {
     text-align: center;
     text-decoration: none;
     font-family: 'Gochi Hand', cursive;
+    border-radius: 20px
 
 
 }
@@ -146,14 +150,20 @@ section {
 }
 .whitebox{
     background-color: white;
-    height: 200px
+    height: 400px;
+    
+}
+.whiteboxShop{
+    background-color: white;
+    height:auto
 }
 .yellowbox{
     background-color: hsl(52, 100%, 55%);
     color:hsl(0, 4%, 24%);
     line-height: 21.6px
 }
-.tableName{
+.tableName,
+.Shoppinglist{
     color: hsl(0, 4%, 24%);
     font-family: 'Gochi Hand', cursive;
     font-size: 81.45px;
@@ -180,19 +190,22 @@ section {
     box-shadow: hsl(186, 100%, 17%);
     color: white;
     display: inline-block;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
     line-height: 10px;
     padding: 20px 40px;
     text-align: center;
     text-decoration: none;
     font-family: 'Gochi Hand', cursive;
-    margin: 44px 
+    margin: 40px ;
+    border-radius: 20px
 }
 .btn{
-    margin-left: 450px
+    margin-left: 430px
 }
-#tblCsoport{
+#tblCsoport,
+#tblCsoportAll,
+#tblShoppingTable{
     
     font-size: 20px;
     font-family: 'Gochi Hand', cursive;
@@ -205,7 +218,9 @@ section {
     box-shadow: 18px -4px 31px 0px rgba(0, 0, 0, 0.75);
 
 }
-#tblCsoport td, #tblCsoport th{
+#tblCsoport td, #tblCsoport th,
+#tblCsoportAll td, #tblCsoportAll th,
+#tblShoppingTable td,#tblShoppingTable th{
     border: 1px solid #ddd;
     padding:4px;
     width:80%
@@ -213,14 +228,20 @@ section {
 }
 
 
-#tblCsoport tr:nth-child(even){
+#tblCsoport tr:nth-child(even),
+#tblCsoportAll tr:nth-child(even),
+#tblShoppingTable tr:nth-child(even){
     background-color: #f2f2f2;
 
 }
-#tblCsoport tr:hover{
+#tblCsoport tr:hover,
+#tblCsoportAll tr:hover,
+#tblShoppingTable tr:hover{
 background-color: #ddd
 }
-#tblCsoport th{
+#tblCsoport th,
+#tblCsoportAll th,
+#tblShoppingTable th{
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
@@ -258,6 +279,14 @@ background-color: #ddd
     text-align: center
 
 }
+.inputSearch:focus{
+    border-radius: 27px 0px   0px 27px ;
+    font-size: 30px;
+    padding: 20px 30px;
+    text-align: center;
+    border: solid 5px goldenrod;
+}
+
 .startSearch{
     background-color: hsl(186, 100%, 17%);
      border-radius: 0px 27px 27px 0px;
@@ -283,12 +312,162 @@ background-color: #ddd
     text-align: center;
     text-decoration: none;
     font-family: 'Gochi Hand', cursive;
-    margin: 44px 630px
+    margin: 44px 630px;
+    border-radius: 20px
 
 }
-.yellowboxQuestion{
+.yellowboxQuestion 
+{
+background-color: hsl(52, 100%, 55%);
+color: hsl(0, 4%, 24%);
+font-family: 'Gochi Hand', cursive;
+font-size:30px;
+font-weight: 300px;
+letter-spacing: -0.5px;
+line-height: 20px;
+text-align: center;
+padding: 25px;
+
+}
+.checkIt{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: hsl(186, 100%, 17%);
+    color: white;
+    margin: 20px 400px;
+    border-radius: 20px
+}
+.yellowboxQuestion > p:nth-child(3),
+.yellowboxQuestion > p:nth-child(5),
+.yellowboxQuestion > p:nth-child(7)
+{
+    color:hsl(186, 100%, 17%);
+    font-family: 'Gochi Hand', cursive;
+font-size:25px;
+font-weight: 200px;
+letter-spacing: -0.5px;
+line-height: 20px;
+text-align: center;
+padding: 25px;
+text-decoration: none;
+}
+.yellowboxShop{
+font-family: 'Gochi Hand', cursive;
 background-color: hsl(52, 100%, 55%);
 color:hsl(0, 4%, 24%);
 line-height: 21.6px;
+font-size: 45px;
+font-weight: 200px;
+letter-spacing: -0.5px;
+line-height: 20px;
+text-align: center;
+padding: 25px;
+font-family: 'Gochi Hand', cursive;
 
+
+}
+li{
+    list-style-type :none;
+    color: hsl(186, 100%, 17%);
+    padding:20px
+}
+#addButton,
+#removeButton
+{
+    
+    background-color: hsl(186, 100%, 17%);
+    box-shadow: hsl(186, 100%, 17%);
+    color: white;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 10px;
+    padding: 20px 40px;
+    text-align: center;
+    font-family: 'Gochi Hand', cursive;
+    margin: 40px ;
+    border-radius: 20px;
+    border:none
+
+}
+.form-control{
+    display: block;
+    text-align: center;
+    margin-left: 520px;
+    border-radius: 27px  ;
+    font-size: 30px;
+    padding: 20px 30px;
+    
+}
+.form-control:focus{
+    display: block;
+    text-align: center;
+    margin-left: 520px;
+    border-radius: 27px  ;
+    font-size: 30px;
+    padding: 20px 30px;
+    border: solid 5px goldenrod;
+}
+.btnBtnLogin{
+background-color: hsl(186, 100%, 17%);
+box-shadow: hsl(186, 100%, 17%);
+color: white;
+display: block;
+font-size: 50px;
+font-weight: 500;
+line-height: 10px;
+padding: 20px 40px;
+text-align: center;
+text-decoration: none;
+font-family: 'Gochi Hand', cursive;
+margin: 44px 650px;
+border-radius: 20px;
+border:none}
+
+.yellowboxLogin{
+background-color: hsl(52, 100%, 55%);
+color:hsl(0, 4%, 24%);
+line-height: 21.6px;
+font-family: 'Gochi Hand', cursive;
+line-height: 21.6px;
+font-size: 45px;
+font-weight: 200px;
+letter-spacing: -0.5px;
+line-height: 20px;
+text-align: center;
+padding: 25px
+}
+.yellowboxLogin input{
+    margin-bottom: 20px;
+    margin-top: 50px
+}
+.yellowboxLogin input:focus{
+    margin-bottom: 20px;
+    margin-top: 50px;
+    border: solid 5px goldenrod
+}
+.shoppingShow,
+.shoppingDel{
+    background-color: hsl(186, 100%, 17%);
+    box-shadow: hsl(186, 100%, 17%);
+    color: white;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 10px;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gochi Hand', cursive;
+    margin: 44px 500px;
+    border-radius: 20px;
+    border:none
+
+}
+.thx{
+    text-align: center;
+    color: hsl(186, 100%, 17%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
 }

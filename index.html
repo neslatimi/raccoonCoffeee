@@ -11,16 +11,15 @@
 </head>
 
 <body>
-    <header class="globalNavBar">
-        <div class="logo">
-            <img class="logoimg" src="/img/racoonLogo.png" alt="raccoonlogo">
+    <header class="globalNavBar ">
+        <div class="logo ">
+            <img class="logoimg " src="/img/racoonLogo.png" alt="raccoonlogo">
             <p>Racoon Coffee</p>
         </div>
-        <a class="a1" href="#tableName">List of our Coffee's</a>
-        <a class="a2" href="#shopping">Make your order</a>
-        <a class="a3" href="#shopping">Check your shopping list &#128722;</a>
-        <a class="a4" href="#">Contacts</a>
-        <a class="a5" href="#">Sign Up</a>
+        <a class="a1 " href="#tableName">List of our Coffee's</a>
+        <a class="a2 " href="#shopping">Make your order</a>
+        <a class="a3 " href="#slist">Check your shopping list &#128722;</a>
+        <a class="a5" href="#signup" >Sign Up</a>
     </header>
     <section class="WelcomeYellow">
         <div class="layout">
@@ -33,18 +32,53 @@
             </div>
         </div>
     </section>
-    <div class="whitebox"></div>
+    <div class="whiteboxShop">
+        <h2 class="Shoppinglist" id="slist">Shopping list</h2>
+        <div class="shoppingShow">Check your shopping chart</div>
+               <div class="shoppingDel">Send to us your order</div>
+        <p class="thx">THANK YOU</p>
+        <table id="tblShoppingTable">
+            <thead>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Intensity</th>
+                <th>Instock</th>
+                <th>Price/Kg</th>
+                <th>Price/cup</th>
+                <th>Buy</th>
+                <th>#Id</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+       
+    </div>
     <div class="yellowbox">
         <h2 class="tableName" id="tableName">Check out the Coffee's</h2>
         <div class="search">
-            <input type="text" class="inputSearch" placeholder="Search by name....">
+            <input type="text" class="inputSearch" onfocus="this.value=' '" placeholder="Search by name....">
             <div class="startSearch">🔎</div>
-            <div class="searchResult"></div>
+            <div class="searchResult" ></div>
         </div>
         <div class="btn">
             <a class="showAll">Show all the coffee</a>
             <a class="hideAll">Hide all the coffee</a>
         </div>
+        <table id="tblCsoportAll">
+            <thead>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Intensity</th>
+                <th>Instock</th>
+                <th>Price/Kg</th>
+                <th>Price/cup</th>
+                <th>Buy</th>
+                <th>#Id</th>
+            </thead>
+            <tbody></tbody>
+        </table>
         <div>
             <h3 class="moreFilterShow">Click for more filter ⯆</h3>
             <div class="hideAndShow">
@@ -59,35 +93,81 @@
                     <div class="clear">Clear your select</div>
                     
                 </div>
+                <table id="tblCsoport">
+                    <thead>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Intensity</th>
+                        <th>Instock</th>
+                        <th>Price/Kg</th>
+                        <th>Price/cup</th>
+                        <th>Buy</th>
+                        <th>#Id</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
                 <div class="yellowboxQuestion">
-                        <p>Select one of them:</p>
-                        <div id="cheap">Most cheapest coffee/Cup: <p  class="outputcheap"></p></div>
-                        <div id="expensive">Most Expensive coffee/Cup:  <p class="outputExpensive"></p></div>
+                    
+                        <p class="checkIt">Check out our price statistics(click on the texts):</p>
+                        <div id="expensive">Most Expensive coffee per Cup: </div>
+                        <p class="outputExpensive"></p>
+                        <div id="cheap">Most cheapest coffee per Cup: </div>
+                        <p  class="outputcheap"></p>
+                        <div id="avg">Average price per cup: </div>
+                        <p  class="avg"></p>
+                                         
                 </div>
                 
             </div>
         </div>
         </div>
-    <table id="tblCsoport">
-        <thead>
-            <th>Name</th>
-            <th>Country</th>
-            <th>Intensity</th>
-            <th>Instock</th>
-            <th>Price/Kg</th>
-            <th>Price/cup</th>
-            <th>Buy</th>
-            <th>#Id</th>
-        </thead>
-        <tbody></tbody>
-    </table>
+          
     
     <div class="whitebox"></div>
-    <div class="yellowbox"></div>
+    <div class="yellowboxShop">
 
-    <div class="yellowbox">
-        <div id="shopping">Hello</div>
+            <h2 id="shopping">Let's start shopping</h2>
+            <p>If you know your coffee id or name you can add to your list</p>
+            
+            <ul id="list"></ul>
+            
+            <div class="row">
+                    <input class="form-control" type="text" placeholder="Write your list.." id="newName">
+                    <button class="btn" id="addButton">Add to your list</button>
+                    <button class="btn pull-right" id="removeButton">Remove from your list</button>
+                </div>
+        
     </div>
+    <div class="whitebox"></div>
+    <div class="yellowboxLogin">
+        <h2 id="signup">Sign up</h2>
+        <form>
+                <div class="form-group">
+                    <label for="username">SORRY only "raccoon" can login with the most commonly used number</label>
+                    <input type="text" id="username" class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="password"></label>
+                    <input type="text" id="password" class="form-control" placeholder="Password">
+                </div>
+                <button type="button" class="btnBtnLogin" onclick="sendForm()">Login</button>
+               
+    
+                <label for="result"></label>
+                <textarea id="result" class="form-control" rows="3" disabled>
+    
+        </textarea>
+            </form>
+            <div class="row">
+                    <div class="col-xs-5">
+                    </div>
+                    <div class="col-xs-2">
+        
+                    </div>
+                </div>
+            
+    </div>
+    <div class="whitebox"></div>
 
 
     <script type="text/javascript" src="/main.js"></script>
