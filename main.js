@@ -21,7 +21,7 @@ function window_LoadHandler() {
     var login = document.querySelector('.btnBtnLogin');
     var shopShow = document.querySelector('.shoppingShow');
     var shopDel = document.querySelector('.shoppingDel');
-
+    
     signUpBtn.addEventListener('mouseover', addShadowed, false);
     pickOneBtn.addEventListener('mouseover', addShadowed, false);
     showAllBtn.addEventListener('mouseover', addShadowed, false);
@@ -157,7 +157,7 @@ function delete_shopping() {
 //kavék generálása létrehozása
 var coffeeArray = [];
 
-var names = ["Affogato", "Americano", "Bicerin", "Breve", "Café Bombón", "Café au lait", "Café Crema", "Caffé Latte", "Caffé macchiato", "Café mélange", "Coffee milk"];
+var names = ["Affogato", "Americano", "Bicerin", "Breve","Coffee Bosnian", "Café Bombón", "Café au lait", "Café Crema", "Caffé Latte", "Caffé macchiato", "Café mélange", "Coffee milk"];
 var country = ['HU', 'DE', 'USA', 'BA', 'BR', 'CA', 'CL'];
 var intensitity = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var instock = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40];
@@ -169,8 +169,7 @@ for (let i = 0; i < 100; i++) {
     coffee.country = country[Math.floor(Math.random() * country.length)];
     coffee.intensitity = intensitity[Math.floor(Math.random() * intensitity.length)];
     coffee.instock = instock[Math.floor(Math.random() * instock.length)];
-    coffee.pricePerKilo = Math.round(Math.random() * 5000) + 500;
-    coffee.pricePerCup = parseInt(coffee.pricePerKilo / 3);
+    coffee.pricePerCup = parseInt( Math.round(Math.random() * 5000)/ 3);
     coffee.add = '🛒';
     coffee.id = i + 1;
     coffeeArray.push(coffee);
@@ -201,7 +200,9 @@ function buildShopping(tomb) {
         nodeTR.appendChild(nodeTD);
         nodeTR.addEventListener('click', Kosar_torles_ClickHandler, false);
         nodeTbody.appendChild(nodeTR);
+        
     }
+    osszeg();
 }
 
 
@@ -219,6 +220,7 @@ function Kosar_torles_ClickHandler() {
         }
     }
     buildShopping(basket);
+   
 }
 
 
@@ -226,19 +228,28 @@ function Kosar_torles_ClickHandler() {
 function buildTable(tomb) {
 
     var nodeTbody = document.querySelector('#tblCsoport>TBODY');
-
     nodeTbody.innerText = '';
     for (var row = 0; row < tomb.length; row++) {
-        var nodeTR = document.createElement('TR');
         var coffeeAll = tomb[row];
+        var nodeTR = document.createElement('TR');
+        nodeTR.setAttribute('data-coffeesid', coffeeAll.id)
         nodeTbody.appendChild(nodeTR);
-        for (var propName in tomb[row]) {
-            var nodeTD = document.createElement('TD');
-            nodeTD.innerText = tomb[row][propName];
-            nodeTR.appendChild(nodeTD);
+        for (var propName in coffeeAll) {
+            if (propName === 'add') {
+
+                var nodeTD = document.createElement('TD');
+                nodeTD.addEventListener('click', ShoppingTRolley_clickHandler);
+                nodeTD.innerText = coffeeAll[propName];
+                nodeTR.appendChild(nodeTD);
+            } else {
+                var nodeTD = document.createElement('TD');
+                nodeTD.innerText = coffeeAll[propName];
+                nodeTR.appendChild(nodeTD);
+            }
         }
 
     }
+
 }
 function buildTableAll(tomb) {
 
@@ -426,6 +437,7 @@ function removeName_ClickHandler() {
 
 //shopping list eseménykezelő
 var basket = [];
+var basketPrice=[];
 
 function ShoppingTRolley_clickHandler() {
 
@@ -442,6 +454,19 @@ function ShoppingTRolley_clickHandler() {
     console.log(basket)
 }
 
+//kosár tartalmának az összege
+
+function osszeg(){
+	sum=0;
+for (var i=0;i<basket.length;i++){			
+		sum+=basket[i].pricePerCup;
+}		
+fillSum(sum);
+}
+
+function fillSum(osszeg){
+    document.querySelector('.sum').innerHTML=osszeg;
+}
 
 //login
 

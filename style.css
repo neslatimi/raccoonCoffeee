@@ -162,6 +162,10 @@ section {
     color:hsl(0, 4%, 24%);
     line-height: 21.6px
 }
+/*.notFound{
+    color: red;
+    font-family: 'Gochi Hand', cursive;
+}*/
 .tableName,
 .Shoppinglist{
     color: hsl(0, 4%, 24%);
@@ -247,6 +251,12 @@ background-color: #ddd
     text-align: left;
     background-color: hsl(186, 100%, 17%);
     color: white
+}
+#tblShoppingTable>tfoot{
+   color: red;
+   text-align: right;
+   font-size: 40px;
+    
 }
 .radioBtn{
     color: hsl(0, 4%, 24%);
